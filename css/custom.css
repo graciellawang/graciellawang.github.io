@@ -1,0 +1,90 @@
+.projects-container {
+    display: flex; /* 使用 flexbox 布局 */
+    justify-content: space-between; /* 横向排列，均匀分布 */
+    gap: 20px; /* 项目框之间的间距 */
+    flex-wrap: wrap; /* 响应式布局，小屏幕时换行 */
+    margin: 20px auto; /* 设置上下间距和居中 */
+}
+
+.project-box {
+    width: 30%; /* 每个框占容器的 30% 宽度，三列布局 */
+    background-color: #fff; /* 设置背景色 */
+    border: 2px solid #ddd; /* 添加边框 */
+    border-radius: 8px; /* 圆角效果 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+    overflow: hidden; /* 防止内容溢出 */
+    padding: 20px; /* 内边距 */
+    transition: transform 0.3s ease; /* 悬停时放大 */
+}
+
+.project-box:hover {
+    transform: scale(1.05); /* 鼠标悬停时略微放大 */
+}
+
+.project-img {
+    width: 100%; /* 图片宽度填满容器 */
+    height: 200px; /* 固定高度 */
+    object-fit: cover; /* 图片裁剪，保持比例填满容器 */
+}
+
+.project-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 15px 0;
+    color: #333; /* 设置标题颜色 */
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .project-box {
+        width: 100%; /* 小屏幕时每个框占满整行 */
+    }
+    .projects-container {
+        gap: 10px; /* 减少框之间的间距 */
+    }
+}
+
+
+
+
+
+
+
+
+
+.card-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;  /* 允许换行 */
+}
+
+.card {
+    flex: 1 1 30%;
+    min-width: 250px;
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+    .card {
+        flex: 1 1 100%;
+    }
+}
